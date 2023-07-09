@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project XII</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+</head>
+
+<!-- Script Links -->
+<script src="CRUD.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark col-md-8 mx-auto" style="background-color:#930c0c;">
+            <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">Project XI</a>
+            
+            </div>
+        </nav>
+    </div>
+
+    <!-- New Item Entry (Create) -->
+
+    <div class="row">
+        <div class="container-fluid col-md-8 mx-auto my-4 py-4 border border-dark">
+            <div id="new book" class="jumbotron">
+                <h4>New Book Entry</h4>
+                <input type="text" id="new-book-name" class="form-control" placeholder="Title"> <br>
+                <input type="text" id="new-book-author" class="form-control" placeholder="Author"> <br>
+                <input type="text" id="new-book-ISBN" class="form-control" placeholder="ISBN"> <br>
+
+                <button id="create-new-book" class="btn btn-primary form-control" onclick=newentry()>Create</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Catalogue (Read) -->
+    <div class="row">
+
+<!-- This is basically a glorified spreadsheet. I've chosen not to use any extrernal CSS, and just use bootstrap classes for styling. -->
+
+        <div class="container-fluid col-md-8 mx-auto  my-4 py-4 border border-dark">
+            <table class="table table-responsive-md table-light table-striped table-hover table-bordered" id="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th class="th-sm">Actions</th> <!-- Update and Delete are in JS file -->
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+            
+    </div>
+
+</body>
+</html>
